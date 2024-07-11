@@ -1,15 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export function getQuery(req: NextApiRequest, res: NextApiResponse) {
-  const { query } = req;
-  
-  const param1 = query.param1 as string;
-  const param2 = query.param2 as string;
-
-  res.status(200).json({ param1, param2 });
-};
-
-
 export async function getPosts(page = 1, limit = 10) {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
   const posts = await res.json()

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from './page.module.scss'
-import { getPosts, getAuthor, getQuery } from '../getters.module'
+import { getPosts, getAuthor } from '../getters.module'
 
 const page = 4
 const limit = 5
@@ -12,7 +12,7 @@ type Post = {
     body: string
 }
 
-export default async function Posts({ query }: { query: { page: string } }) {
+export default async function Posts() {
     const posts = await getPosts(page, limit)
 
     return(
