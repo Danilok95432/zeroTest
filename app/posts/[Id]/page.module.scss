@@ -1,0 +1,43 @@
+.post{
+    width: 80%;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    &__elem {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        background: #fff;
+        border-radius: 24px;
+        &__author {
+            font-size: 24px;
+        }
+        &__body {
+            font-size: 18px;
+        }
+    }
+    .comments {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        .comment {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #000;
+            color: #fff;
+            &__title {
+                font-size: 22px;
+            }
+            &__body {
+                font-size: 18px;
+            }
+        }
+    }
+}
